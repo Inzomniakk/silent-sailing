@@ -17,4 +17,15 @@ public interface SilentSailingConfig extends Config
     {
         return true;
     }
+
+    @ConfigItem(
+            keyName = "muteOwnShip",
+            name = "Mute My Ship's Crew",
+            description = "Mutes ambient and action-related dialogue from your own ship's crew (e.g., \"Trimming the sails!\").",
+            position = 2
+    )
+    default boolean muteOwnShip()
+    {
+        return false;
+    }
 }
